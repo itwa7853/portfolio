@@ -1,0 +1,13 @@
+•	Website with google maps
+•	Fetch covid FIPS file
+•	Get latitude and longitude from FIPS
+o	Possibly use here.com to do this
+•	For each day and for each FIPS code display a circle based on how many cases exist for that FIPS code
+o	Circle size based on how many cases
+	Less than 10 small dot
+	10 to 100 medium sized dot
+	100 to 1000 larger dot
+	More than 1000 large red circle
+•	Add a slider that allows the user to see how many cases there are each day
+•	https://developers.google.com/maps/documentation/javascript/heatmaplayer
+•

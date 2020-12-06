@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    <form action="/sell" method="post">
+        <div class="form-group">
+            {% if not currentlyOwnedStocks %}
+            <select class="form-control" disabled name="stockName" type="text" placeholder="Share Symbol">
+            {% else %}
+            <select class="form-control" name="stockName" type="text" placeholder="Share Symbol">
+            {% endif %}
+                {% for row in currentlyOwnedStocks %}
+                    <option class="form-control">{{ row['symbol'] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            {% if not currentlyOwnedStocks %}
+            <input disabled class="form-control" name="shares" type="number" placeholder="Shares">
+            {% else %}
+            <input class="form-control" name="shares" type="number" min="0" placeholder="Shares">
+            {% endif %}
+        </div>
+        {% if not currentlyOwnedStocks %}
+        <button disabled class="btn btn-primary">Sell</button>
+        {% else %}
+        <button class="btn btn-primary">Sell</button>
+        {% endif %}
+    </form>
+{% endblock %}

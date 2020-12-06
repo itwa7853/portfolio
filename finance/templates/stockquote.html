@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+
+{% block main %}
+    {% if not stockDescription %}
+    <form action="/quote" method="post">
+        <div class="form-group">
+            <input class="form-control" type="text" name="stockName" placeholder="Stock Name">
+        </div>
+        <button class="btn btn-primary" type="submit">Quote</button>
+    </form>
+    {% else %}
+    {{ stockDescription }}
+    {% endif %}
+{% endblock %}
