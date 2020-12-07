@@ -1,0 +1,113 @@
+/* Always set the map height explicitly to define the size of the div element that contains the map. */
+#map {
+  height: 100%;
+  width: 100%
+}
+#mapContainer {
+  height: 100%;
+  width: 100%;
+  margin-top: 15px;
+  padding-bottom: 15px;
+}
+.disabled {
+  pointer-events: none;
+}
+#button {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+#totalCases, #totalCasesNumberSpan, #dateSpan {
+  color: white;
+  font-weight: 500;
+  font-size: 23px;
+}
+
+#totalCasesNumberSpan{
+  color: coral
+}
+
+#bothTables{
+  height: 107%;
+  margin-top: 15px;
+}
+
+#tbodyContainer {
+  overflow: auto;
+  height: 88%;
+}
+#theader {
+  margin-bottom: 0;
+}
+tr td:nth-child(1) {
+  width: 22%;
+}
+tr td:nth-child(2) {
+  width: 30%;
+}
+tr td:nth-child(3) {
+  width: 24%;
+}
+td {
+  color: whitesmoke;
+}
+h1, section, p {
+  color: whitesmoke;
+}
+
+h2, th {
+  color: yellowgreen;
+}
+
+.row {
+  margin: 0 !important
+}
+
+.container {
+  margin-top: 50px !important;
+  margin: auto;
+  background-color: currentColor;
+  height: 75%;
+  max-height: 75%;
+  width: 75%;
+  padding-bottom: 100px;
+  padding-top: 15px;
+}
+#mainPageContainer{
+  height: unset;
+  max-height: unset;
+  padding-bottom: 10px;
+  margin-bottom: 50px
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: url("images/background.jpg") no-repeat fixed center
+}
+
+#floating-panel {
+  position: absolute;
+  top: 10px;
+  left: 25%;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: "Roboto", "sans-serif";
+  line-height: 30px;
+  padding-left: 10px;
+}
+
+#floating-panel {
+  background-color: #fff;
+  border: 1px solid #999;
+  left: 25%;
+  padding: 5px;
+  position: absolute;
+  top: 10px;
+  z-index: 5;
+}

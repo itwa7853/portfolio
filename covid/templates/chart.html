@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Charts
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <input class=".form-control" type="date" id="date" name="date" min="2020-01-21">
+        <button id="button" class="btn btn-primary col-md-2 disabled">Loading...</button>
+        <span class="col-md-7"><span id="totalCases"></span><span id="totalCasesNumberSpan"></span></span>
+    </div>
+    <div id="bothTables">
+        <table id="theader" class="table">
+            <thead>
+                <tr>
+                    <th>State</th>
+                    <th>County</th>
+                    <th>Cases</th>
+                    <th>Deaths</th>
+                </tr>
+            </thead>
+        </table>
+        <div id="tbodyContainer">
+            <table id="tbody" class="table">
+            </table>
+        </div>
+    </div>
+</div>
+<script src="{{url_for('static', filename='js/chart.js')}}"></script>
+{% endblock %}

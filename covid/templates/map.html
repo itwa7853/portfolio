@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Map
+{% endblock %}
+
+{% block googlemapssrc %}
+  <script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC40h6P-eh3B8yfYczRYfn2bKR0YXVJ6z0&callback=initMap&libraries=visualization&v=weekly"
+  defer
+  ></script>
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <h2 class="col-md-7">COVID CASES IN THE US</h2><span class="col-md-5" id="dateSpan">Loading...</span>
+    </div>
+    <div class="row">
+      <input type="range" id="slider" min="0" class="disabled col-md-12"></div>
+    <div class="row">
+      <span class="col-md-12"><span id="totalCases"></span><span id="totalCasesNumberSpan"></span></span>
+    </div>
+    <div id="mapContainer">
+      <div id="map"></div>
+    </div>
+  </div>
+  <script src="{{url_for('static', filename='js/fetch.js')}}"></script>
+  <script src="{{url_for('static', filename='js/map.js')}}"></script>
+{% endblock %}
